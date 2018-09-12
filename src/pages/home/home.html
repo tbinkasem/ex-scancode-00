@@ -1,14 +1,22 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="teera">
     <ion-title>
-      Ionic Blank
+      แอพสแกนโค๊ดแบบต่าง ๆ
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <h2>กรุณาคลิกปุ่ม เพื่อทำการสแกนโค๊ด</h2>
+  <button ion-button block icon-only (click)="scan()">
+    <ion-icon name="camera"></ion-icon>
+  </button>
+  <h2>-----------------------------------</h2>
+  <ion-list>
+    <ion-item>
+      <b>สถานะ : </b>{{ data.cancelled }}<br>
+      <b>ข้อมูล : </b>{{ data.text }}<br>
+      <b>รูปแบบ : </b>{{ data.format }}<br>
+    </ion-item>
+  </ion-list>
 </ion-content>
